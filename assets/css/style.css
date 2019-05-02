@@ -18,6 +18,10 @@ body{
     background: #eee;
     text-align: right;
 }
+
+/*
+    Header styles
+ */
 .pageTitle{
     color: #333;
     font: 27px 'FShabnamB';
@@ -110,4 +114,62 @@ body{
     color: #333;
     font: 17px 'FShabnam';
     margin-top: 9px;
+}
+
+/*
+    Body styles
+ */
+#ptBody{
+    margin-top: 50px;
+}
+.ptDayBox{
+    width: 100%;
+    background: #fff;
+    border: 1px solid #fff;
+    border-top: 3px solid #555;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .05);
+    padding-top: 22px;
+}
+.ptDayBoxToday{
+    border-top: 3px solid var(--clr1);
+}
+.ptDayBoxTitle{
+    color: #333;
+    font: 23px 'FShabnamB';
+    text-align: center;
+    margin-bottom: 4px;
+}
+.ptDayBoxDate{
+    direction: ltr;
+    color: #444;
+    font: 18px 'FShabnam';
+    text-align: center;
+    border-bottom: 1px dashed #bbb;
+    padding-bottom: 5px;
+    margin: 0 20px 10px 20px;
+}
+.ptDayBox div:last-child{
+    border-bottom: none;
+}
+.ptDayBoxTime{
+    border-bottom: 1px solid #e2e2e2;
+    padding: 8px 15px 8px 15px;
+}
+.ptDayBoxIcon{
+    width: 100%;
+}
+.ptDayBoxTimeName{
+    color: #999;
+    font: 16px 'FShabnam';
+    text-align: center;
+    padding-left: 17px;
+    margin-top: 5px;
+}
+.ptDayBoxTimeValue{
+    direction: ltr;
+    color: #444;
+    font: 18px 'FShabnamB';
+    text-align: center;
+    padding-left: 17px;
 }
