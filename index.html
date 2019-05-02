@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -8,6 +8,40 @@
 </head>
 <body>
 
+<div class="container mt-40">
+    <h1 class="pageTitle">اوقات شرعی سنندج</h1>
+
+    <div id="ptSettingForm" class="row">
+        <div class="col-lg-5">
+            <input class="ptCityInput ts-3">
+            <div class="ptCityInputBtn noSelect">تعیین</div>
+            <div id="ptCitySearchResult">
+                <ul id="ptCitySearchList" class="noSelect">
+                    <li>تهران</li>
+                    <li>مشهد</li>
+                    <li>اصفهان</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div id="ptGPSBtn" class="ts-4 noSelect">موقعیت‌یابی</div>
+        </div>
+        <div class="col-lg-5">
+            <div class="ptSettingRadioContainer">
+                <input class="ptSettingRadio" type="radio" name="ptSettingRadio1" id="ptSettingRadioDefault" value="Default" checked>
+                <label class="ptSettingRadioLabel" for="ptSettingRadioDefault">پیش‌فرض</label>
+            </div>
+            <div class="ptSettingRadioContainer">
+                <input class="ptSettingRadio" type="radio" name="ptSettingRadio1" id="ptSettingRadioHanafi" value="Hanafi">
+                <label class="ptSettingRadioLabel" for="ptSettingRadioHanafi">حنفی</label>
+            </div>
+            <div class="ptSettingRadioContainer">
+                <input class="ptSettingRadio" type="radio" name="ptSettingRadio1" id="ptSettingRadioJaafari" value="Jaafari">
+                <label class="ptSettingRadioLabel" for="ptSettingRadioJaafari">جعفری</label>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="assets/js/jquery.js"></script>
 </body>
