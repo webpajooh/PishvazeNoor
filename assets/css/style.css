@@ -164,12 +164,13 @@ body{
     font: 16px 'FShabnam';
     text-align: center;
     padding-left: 17px;
-    margin-top: 5px;
+    margin-top: 4px;
 }
 .ptDayBoxTimeValue{
     direction: ltr;
     color: #444;
     font: 18px 'FShabnamB';
+    font-weight: bold;
     text-align: center;
     padding-left: 17px;
 }
