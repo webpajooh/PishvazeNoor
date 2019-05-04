@@ -14,10 +14,10 @@
 <div id="ptForDesktop" class="container">
     <div id="ptSettingForm" class="row">
         <div class="col-lg-5">
-            <input class="ptCityInput ts-3">
+            <input class="ptCityInput ptDesktopCityInput ts-3">
             <div class="ptCityInputBtn noSelect">تعیین</div>
-            <div id="ptCitySearchResult" class="hidden">
-                <ul id="ptCitySearchList" class="noSelect">
+            <div id="ptCitySearchResult" class="ptCitySearchResult hidden">
+                <ul class="ptCitySearchList noSelect">
                     <li>تهران</li>
                     <li>مشهد</li>
                     <li>اصفهان</li>
@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="col-lg-2">
-            <div id="ptGPSBtn" class="ts-4 noSelect">موقعیت‌یابی</div>
+            <div class="ptGPSBtn ts-4 noSelect">موقعیت‌یابی</div>
         </div>
         <div class="col-lg-5">
             <div id="ptSettingRadioContainer">
@@ -124,7 +124,39 @@
 </div>
 
 <div id="ptForMobile">
-    Bla bla bla
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mt-30">
+                <input class="ptCityInput ptMobileCityInput ts-3">
+                <div class="ptCityInputBtn ptMobileCityInputBtn noSelect">تعیین</div>
+                <div id="ptMobileCitySearchResult" class="ptCitySearchResult hidden">
+                    <ul class="ptCitySearchList noSelect">
+                        <li>تهران</li>
+                        <li>مشهد</li>
+                        <li>اصفهان</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="ptMobileBody">
+            <div class="col-12">
+                <div id="ptMobileDaySlider" class="mt-20">
+                    <div class="ptMobileDaySliderArrow float-right"><</div>
+                    <div class="ptMobileDaySliderArrow float-left">></div>
+                    <div class="ptMobileDayTitle">شنبه</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div id="ptMobileDayBox">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="assets/js/jquery.js"></script>

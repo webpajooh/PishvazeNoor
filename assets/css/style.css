@@ -6,6 +6,10 @@
 a{text-decoration:none !important;} a:hover{text-decoration:none !important;} a:active{text-decoration:none !important;}
 .noSelect{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
 .hidden{display: none;}
+.float-right{float: right;}
+.float-left{float: left;}
+.mt-20{margin-top: 20px;}
+.mt-30{margin-top: 30px;}
 .mt-40{margin-top: 40px;}
 .ts-3{transition: .3s;}
 .ts-4{transition: .4s;}
@@ -61,7 +65,7 @@ body{
     padding-top: 10px;
     cursor: pointer;
 }
-#ptCitySearchResult{
+.ptCitySearchResult{
     width: 68%;
     background: #fff;
     border: 1px solid #ddd;
@@ -69,21 +73,21 @@ body{
     border-bottom-left-radius: 8px;
     box-shadow: 0 4px 7px rgba(0, 0, 0, .08);
 }
-#ptCitySearchList{
+.ptCitySearchList{
     margin-bottom: 5px;
     padding: 4px 0 0 0;
 }
-#ptCitySearchList li{
+.ptCitySearchList li{
     color: #333;
     font: 17px 'FShabnam';
     list-style: none;
     padding: 8px 15px;
     cursor: pointer;
 }
-#ptCitySearchList li:hover{
+.ptCitySearchList li:hover{
     background: #eee;
 }
-#ptCitySearchList li:active{
+.ptCitySearchList li:active{
     background: var(--clr1);
     color: #fff;
 }
@@ -185,6 +189,33 @@ body{
     font-weight: bold;
     text-align: center;
     padding-left: 17px;
+}
+
+/*
+    Mobile view
+ */
+#ptMobileDaySlider{
+    width: 100%;
+    padding: 25px 0;
+}
+.ptMobileDayTitle{
+    font: 20px 'FShabnamB';
+    text-align: center;
+    padding-top: 2px;
+}
+.ptMobileDaySliderArrow{
+    font: 20px 'FShabnamB';
+    font-weight: bold;
+    cursor: pointer;
+}
+#ptMobileDayBox{
+    width: 100%;
+    background: #fff;
+    border: 1px solid #fff;
+    border-top: 3px solid var(--clr1);
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .05);
+    padding-top: 22px;
 }
 
 /*
