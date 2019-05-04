@@ -28,17 +28,10 @@
             <div id="ptGPSBtn" class="ts-4 noSelect">موقعیت‌یابی</div>
         </div>
         <div class="col-lg-5">
-            <div class="ptSettingRadioContainer">
-                <input class="ptSettingRadio" type="radio" name="ptSettingRadio1" id="ptSettingRadioDefault" value="Default" checked>
-                <label class="ptSettingRadioLabel" for="ptSettingRadioDefault">پیش‌فرض</label>
-            </div>
-            <div class="ptSettingRadioContainer">
-                <input class="ptSettingRadio" type="radio" name="ptSettingRadio1" id="ptSettingRadioHanafi" value="Hanafi">
-                <label class="ptSettingRadioLabel" for="ptSettingRadioHanafi">حنفی</label>
-            </div>
-            <div class="ptSettingRadioContainer">
-                <input class="ptSettingRadio" type="radio" name="ptSettingRadio1" id="ptSettingRadioJaafari" value="Jaafari">
-                <label class="ptSettingRadioLabel" for="ptSettingRadioJaafari">جعفری</label>
+            <div id="ptSettingRadioContainer">
+                <div class="ptSettingRadio noSelect ptSettingRadioDefault ptActiveRadio">پیش‌فرض</div>
+                <div class="ptSettingRadio noSelect ptSettingRadioHanafi">حنفی</div>
+                <div class="ptSettingRadio noSelect ptSettingRadioJaafari">جعفری</div>
             </div>
         </div>
     </div>
@@ -135,5 +128,6 @@
 </div>
 
 <script src="assets/js/jquery.js"></script>
+<script src="assets/js/web.js"></script>
 </body>
 </html>
