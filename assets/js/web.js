@@ -20,13 +20,14 @@ function refreshTimes() {
     prayTimes.setMethod('Makkah');
     let body = '';
     for (let i=0; i<7; i++) {
+        if (i > 0) {todayBoxClass = '';}else{todayBoxClass = 'ptDayBoxToday';}
         let date = new Date();
         date.setDate(date.getDate() + i);
         let jDate = new jdate(date);
         let jFullDate = jDate.date[0] + '/' + jDate.date[1] + '/' + jDate.date[2];
         times = prayTimes.getTimes(date, [latitudes[currentProvince], longitudes[currentProvince]]);
         body += '<div class="col-lg-3">\n' +
-            '            <div class="ptDayBox ptDayBoxToday">\n' +
+            '            <div class="ptDayBox ' + todayBoxClass + '">\n' +
             '                <h2 class="ptDayBoxTitle">' + daysOfWeek[date.getDay()] + '</h2>\n' +
             '                <h3 class="ptDayBoxDate" title="1440/06/05">' + jFullDate + '</h3>\n' +
             '                <div class="ptDayBoxTime">\n' +
