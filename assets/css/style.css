@@ -66,7 +66,10 @@ body{
     cursor: pointer;
 }
 .ptCitySearchResult{
-    width: 68%;
+    display: none;
+    position: absolute;
+    z-index: 99;
+    width: 64%;
     background: #fff;
     border: 1px solid #ddd;
     border-bottom-right-radius: 8px;
@@ -74,8 +77,8 @@ body{
     box-shadow: 0 4px 7px rgba(0, 0, 0, .08);
 }
 .ptCitySearchList{
-    margin-bottom: 5px;
-    padding: 4px 0 0 0;
+    margin-bottom: 7px;
+    padding: 6px 0 0 0;
 }
 .ptCitySearchList li{
     color: #333;
@@ -90,6 +93,14 @@ body{
 .ptCitySearchList li:active{
     background: var(--clr1);
     color: #fff;
+}
+.searchError{
+    display: block;
+    width: 100%;
+    color: #de1100;
+    font: 16px 'FShabnam';
+    text-align: center;
+    padding: 17px 0;
 }
 .ptGPSBtn{
     width: 100%;
