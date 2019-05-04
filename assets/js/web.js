@@ -36,7 +36,7 @@ function refreshTimes() {
             '                            <img class="ptDayBoxIcon" src="assets/image/fajr.png">\n' +
             '                        </div>\n' +
             '                        <div class="col-lg-8">\n' +
-            '                            <div class="ptDayBoxTimeName">نماز صبح</div>\n' +
+            '                            <div class="ptDayBoxTimeName">اذان صبح</div>\n' +
             '                            <div class="ptDayBoxTimeValue">' + times.fajr + '</div>\n' +
             '                        </div>\n' +
             '                    </div>\n' +
@@ -58,7 +58,7 @@ function refreshTimes() {
             '                            <img class="ptDayBoxIcon" src="assets/image/dhuhr.png">\n' +
             '                        </div>\n' +
             '                        <div class="col-lg-8">\n' +
-            '                            <div class="ptDayBoxTimeName">نماز ظهر</div>\n' +
+            '                            <div class="ptDayBoxTimeName">اذان ظهر</div>\n' +
             '                            <div class="ptDayBoxTimeValue">' + times.dhuhr + '</div>\n' +
             '                        </div>\n' +
             '                    </div>\n' +
@@ -69,7 +69,7 @@ function refreshTimes() {
             '                            <img class="ptDayBoxIcon" src="assets/image/asr.png">\n' +
             '                        </div>\n' +
             '                        <div class="col-lg-8">\n' +
-            '                            <div class="ptDayBoxTimeName">نماز عصر</div>\n' +
+            '                            <div class="ptDayBoxTimeName">اذان عصر</div>\n' +
             '                            <div class="ptDayBoxTimeValue">' + times.asr + '</div>\n' +
             '                        </div>\n' +
             '                    </div>\n' +
@@ -80,7 +80,7 @@ function refreshTimes() {
             '                            <img class="ptDayBoxIcon" src="assets/image/fajr.png">\n' +
             '                        </div>\n' +
             '                        <div class="col-lg-8">\n' +
-            '                            <div class="ptDayBoxTimeName">نماز مغرب</div>\n' +
+            '                            <div class="ptDayBoxTimeName">اذان مغرب</div>\n' +
             '                            <div class="ptDayBoxTimeValue">' + times.maghrib + '</div>\n' +
             '                        </div>\n' +
             '                    </div>\n' +
@@ -91,7 +91,7 @@ function refreshTimes() {
             '                            <img class="ptDayBoxIcon" src="assets/image/isha.png">\n' +
             '                        </div>\n' +
             '                        <div class="col-lg-8">\n' +
-            '                            <div class="ptDayBoxTimeName">نماز عشا</div>\n' +
+            '                            <div class="ptDayBoxTimeName">اذان عشاء</div>\n' +
             '                            <div class="ptDayBoxTimeValue">' + times.isha + '</div>\n' +
             '                        </div>\n' +
             '                    </div>\n' +
