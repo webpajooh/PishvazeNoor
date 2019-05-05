@@ -204,6 +204,14 @@ body{
     padding-left: 17px;
 }
 
+.crText{
+    color: #333;
+    font: 17px 'FShabnam';
+    text-align: center;
+    margin-top: 5px;
+}
+.crText a{color: var(--clr1);}
+
 /*
     Mobile view
  */
