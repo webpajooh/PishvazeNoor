@@ -131,19 +131,18 @@ $(document).ready(function() {
         $(this).addClass('ptActiveRadio');
     });
 
+    let ptCitySearchResult = $('.ptCitySearchResult');
     $('.ptCityInput').focus(function() {
         $(this).val('');
-    });
-    $('.ptCityInput').blur(function() {
+    }).blur(function() {
         if (($(this).val() == '' || $('.searchError').length) && !usingGPS) {
             $(this).val(provinces[currentProvince]);
-            $('.ptCitySearchResult').hide();
+            ptCitySearchResult.hide();
         }
         if (usingGPS) {
             $(this).val('استفاده از GPS');
         }
-    });
-    $('.ptCityInput').keyup(function() {
+    }).keyup(function() {
         let key = $(this).val();
         let filtered = provinces.filter(function(str) {
             if (str[0] == key[0]) return str.indexOf(key) != -1;
@@ -153,12 +152,12 @@ $(document).ready(function() {
                 let pid = provinces.indexOf(e);
                 return '<li onclick="selectProvince(' + pid + ')">' + e + '</li pid="' + pid + '">'
             });
-            $('.ptCitySearchResult').html('<ul class="ptCitySearchList noSelect"></ul>');
+            ptCitySearchResult.html('<ul class="ptCitySearchList noSelect"></ul>');
             $('.ptCitySearchList').html(items);
         }else{
-            $('.ptCitySearchResult').html('<strong class="searchError">استان مورد نظر یافت نشد!</strong>');
+            ptCitySearchResult.html('<strong class="searchError">استان مورد نظر یافت نشد!</strong>');
         }
-        if ($(this).val() == '') $('.ptCitySearchResult').hide();
-        else $('.ptCitySearchResult').slideDown(500);
+        if ($(this).val() == '') ptCitySearchResult.hide();
+        else ptCitySearchResult.slideDown(500);
     });
 });
