@@ -9,9 +9,11 @@ const provinces = ['آذربایجان شرقی', 'آذربایجان غربی',
 const latitudes = [38.0, 37.5, 38.2, 32.6, 35.8, 33.6, 28.9, 35.7, 32.3, 32.8, 36.3, 37.4, 31.5, 36.6, 35.5, 29.4, 29.6, 36.2, 34.6, 35.3, 30.2, 34.3, 30.6, 36.8, 37.2, 33.4, 36.5, 34.0, 27.1, 34.8, 31.8];
 const longitudes = [46.2, 45.0, 48.3, 51.6, 50.9, 46.4, 50.8, 51.3, 50.8, 59.2, 59.6, 57.3, 49.8, 48.4, 53.3, 60.8, 52.5, 50.0, 50.8, 46.9, 57.0, 46.4, 51.5, 54.4, 49.6, 48.3, 53.0, 49.6, 56.2, 48.5, 54.3];
 let currentProvince = 7;
+let customLatitude, customLongitude, usingGPS=false;
 let asrMethod = 'Standard';
 
 function selectProvince(id) {
+    usingGPS = false;
     currentProvince = id;
     $('.ptCityInput ').val(provinces[id]);
     $('.ptCitySearchResult').hide();
@@ -19,6 +21,21 @@ function selectProvince(id) {
 
 function setAsrMethod(method) {
     asrMethod = method;
+}
+
+function setCustomPosition() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            usingGPS = true;
+            customLatitude = position.coords.latitude;
+            customLongitude = position.coords.longitude;
+            $('.ptCityInput').val('استفاده از GPS');
+        });
+    }else{
+        usingGPS = false;
+        alert('Geolocation is not supported by this browser.');
+        selectProvince(currentProvince);
+    }
 }
 
 function refreshTimes() {
@@ -118,9 +135,12 @@ $(document).ready(function() {
         $(this).val('');
     });
     $('.ptCityInput').blur(function() {
-        if ($(this).val() == '' || $('.searchError').length) {
+        if (($(this).val() == '' || $('.searchError').length) && !usingGPS) {
             $(this).val(provinces[currentProvince]);
             $('.ptCitySearchResult').hide();
+        }
+        if (usingGPS) {
+            $(this).val('استفاده از GPS');
         }
     });
     $('.ptCityInput').keyup(function() {
