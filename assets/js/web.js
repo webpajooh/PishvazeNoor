@@ -54,7 +54,7 @@ function refreshTimes() {
         longitude = customLongitude;
     }else{
         latitude = latitudes[currentProvince];
-        logitude = longitudes[currentProvince];
+        longitude = longitudes[currentProvince];
     }
     for (let i=0; i<7; i++) {
         if (i > 0) {todayBoxClass = '';}else{todayBoxClass = 'ptDayBoxToday';}
@@ -63,7 +63,7 @@ function refreshTimes() {
         let jDate = new jdate(date);
         let jFullDate = jDate.date[0] + '/' + jDate.date[1] + '/' + jDate.date[2];
         prayTimes.adjust({asr: asrMethod});
-        times = prayTimes.getTimes(date, [latitude, logitude]);
+        times = prayTimes.getTimes(date, [latitude, longitude]);
         body += '<div class="col-lg-3">\n' +
             '            <div class="ptDayBox ' + todayBoxClass + '">\n' +
             '                <h2 class="ptDayBoxTitle">' + daysOfWeek[date.getDay()] + '</h2>\n' +
