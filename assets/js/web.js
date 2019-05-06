@@ -71,7 +71,7 @@ function refreshTimes() {
         prayTimes.adjust({asr: asrMethod});
         times = prayTimes.getTimes(date, [latitude, longitude]);
         if (!isMobile()) {
-            body += '<div class="col-lg-3"><div class="ptDayBox ' + todayBoxClass + '"><h2 class="ptDayBoxTitle">' + daysOfWeek[date.getDay()] + '</h2><h3 class="ptDayBoxDate" title="1440/06/05">' + jFullDate + '</h3>';
+            body += '<div class="col-lg-3"><div class="ptDayBox ' + todayBoxClass + '"><h2 class="ptDayBoxTitle">' + daysOfWeek[date.getDay()] + '</h2><h3 class="ptDayBoxDate">' + jFullDate + '</h3>';
         }else{
             body += '<div class="ptMobileDaySlide" day="' + daysOfWeek[date.getDay()] + ' (' + jFullDate + ')' + '">';
         }
