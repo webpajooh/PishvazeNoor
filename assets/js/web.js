@@ -52,7 +52,7 @@ function isMobile() {
 }
 
 function refreshTimes() {
-    prayTimes.setMethod('Makkah');
+    prayTimes.setMethod('ISNA');
     let body = '';
     let latitude, longitude;
     if (usingGPS) {
