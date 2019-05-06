@@ -11,6 +11,7 @@ const longitudes = [46.2, 45.0, 48.3, 51.6, 50.9, 46.4, 50.8, 51.3, 50.8, 59.2, 
 let currentProvince = 7;
 let customLatitude, customLongitude, usingGPS=false;
 let asrMethod = 'Standard';
+let mobileCurrentSlide = 1;
 
 function selectProvince(id) {
     usingGPS = false;
@@ -72,7 +73,7 @@ function refreshTimes() {
         if (!isMobile()) {
             body += '<div class="col-lg-3"><div class="ptDayBox ' + todayBoxClass + '"><h2 class="ptDayBoxTitle">' + daysOfWeek[date.getDay()] + '</h2><h3 class="ptDayBoxDate" title="1440/06/05">' + jFullDate + '</h3>';
         }else{
-            body += '<div class="ptMobileDaySlide">';
+            body += '<div class="ptMobileDaySlide" day="' + daysOfWeek[date.getDay()] + '">';
         }
         body += '<div class="ptDayBoxTime"><div class="row">\n' +
             '                        <div class="col-lg-4 col-3">\n' +
@@ -143,6 +144,7 @@ function refreshTimes() {
         }else{
             body += '</div>';
         }
+        if (i == 0) {$('.ptMobileDayTitle').text(daysOfWeek[date.getDay()]);}
     }
     if (isMobile()) {
         $('#ptMobileDayBox').html(body);
@@ -186,5 +188,28 @@ $(document).ready(function() {
         }
         if ($(this).val() == '') ptCitySearchResult.hide();
         else ptCitySearchResult.slideDown(500);
+    });
+
+    $('#ptMobileLeftArrow').click(function() {
+        if (mobileCurrentSlide < 7) {
+            mobileCurrentSlide++;
+        }else{
+            mobileCurrentSlide = 1;
+        }
+        $('.ptMobileDaySlide').hide();
+        let currentSlide = $('.ptMobileDaySlide:nth-child(' + mobileCurrentSlide + ')');
+        currentSlide.show();
+        $('.ptMobileDayTitle').text(currentSlide.attr('day'));
+    });
+    $('#ptMobileRightArrow').click(function() {
+        if (mobileCurrentSlide > 1) {
+            mobileCurrentSlide--;
+        }else{
+            mobileCurrentSlide = 7;
+        }
+        $('.ptMobileDaySlide').hide();
+        let currentSlide = $('.ptMobileDaySlide:nth-child(' + mobileCurrentSlide + ')');
+        currentSlide.show();
+        $('.ptMobileDayTitle').text(currentSlide.attr('day'));
     });
 });
