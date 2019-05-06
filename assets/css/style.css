@@ -215,6 +215,9 @@ body{
 /*
     Mobile view
  */
+#ptForMobile{
+    margin-bottom: 25px;
+}
 #ptMobileDaySlider{
     width: 100%;
     padding: 25px 0;
