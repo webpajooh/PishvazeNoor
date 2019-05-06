@@ -73,7 +73,7 @@ function refreshTimes() {
         if (!isMobile()) {
             body += '<div class="col-lg-3"><div class="ptDayBox ' + todayBoxClass + '"><h2 class="ptDayBoxTitle">' + daysOfWeek[date.getDay()] + '</h2><h3 class="ptDayBoxDate" title="1440/06/05">' + jFullDate + '</h3>';
         }else{
-            body += '<div class="ptMobileDaySlide" day="' + daysOfWeek[date.getDay()] + '">';
+            body += '<div class="ptMobileDaySlide" day="' + daysOfWeek[date.getDay()] + ' (' + jFullDate + ')' + '">';
         }
         body += '<div class="ptDayBoxTime"><div class="row">\n' +
             '                        <div class="col-lg-4 col-3">\n' +
@@ -144,7 +144,7 @@ function refreshTimes() {
         }else{
             body += '</div>';
         }
-        if (i == 0) {$('.ptMobileDayTitle').text(daysOfWeek[date.getDay()]);}
+        if (i == 0) {$('.ptMobileDayTitle').text(daysOfWeek[date.getDay()] + ' (' + jFullDate + ')');}
     }
     if (isMobile()) {
         $('#ptMobileDayBox').html(body);
