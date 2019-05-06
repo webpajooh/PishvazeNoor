@@ -45,6 +45,11 @@ function setHeaderTitle(title) {
     $('.pageTitle').text(title);
 }
 
+function isMobile() {
+    if ($('#ptForMobile').is(":visible")) return true;
+    else return false;
+}
+
 function refreshTimes() {
     prayTimes.setMethod('Makkah');
     let body = '';
@@ -64,16 +69,16 @@ function refreshTimes() {
         let jFullDate = jDate.date[0] + '/' + jDate.date[1] + '/' + jDate.date[2];
         prayTimes.adjust({asr: asrMethod});
         times = prayTimes.getTimes(date, [latitude, longitude]);
-        body += '<div class="col-lg-3">\n' +
-            '            <div class="ptDayBox ' + todayBoxClass + '">\n' +
-            '                <h2 class="ptDayBoxTitle">' + daysOfWeek[date.getDay()] + '</h2>\n' +
-            '                <h3 class="ptDayBoxDate" title="1440/06/05">' + jFullDate + '</h3>\n' +
-            '                <div class="ptDayBoxTime">\n' +
-            '                    <div class="row">\n' +
-            '                        <div class="col-lg-4">\n' +
+        if (!isMobile()) {
+            body += '<div class="col-lg-3"><div class="ptDayBox ' + todayBoxClass + '"><h2 class="ptDayBoxTitle">' + daysOfWeek[date.getDay()] + '</h2><h3 class="ptDayBoxDate" title="1440/06/05">' + jFullDate + '</h3>';
+        }else{
+            body += '<div class="ptMobileDaySlide">';
+        }
+        body += '<div class="ptDayBoxTime"><div class="row">\n' +
+            '                        <div class="col-lg-4 col-3">\n' +
             '                            <img class="ptDayBoxIcon" src="assets/image/fajr.png">\n' +
             '                        </div>\n' +
-            '                        <div class="col-lg-8">\n' +
+            '                        <div class="col-lg-8 col-9">\n' +
             '                            <div class="ptDayBoxTimeName">اذان صبح</div>\n' +
             '                            <div class="ptDayBoxTimeValue">' + times.fajr + '</div>\n' +
             '                        </div>\n' +
@@ -81,10 +86,10 @@ function refreshTimes() {
             '                </div>\n' +
             '                <div class="ptDayBoxTime">\n' +
             '                    <div class="row">\n' +
-            '                        <div class="col-lg-4">\n' +
+            '                        <div class="col-lg-4 col-3">\n' +
             '                            <img class="ptDayBoxIcon" src="assets/image/sunrise.png">\n' +
             '                        </div>\n' +
-            '                        <div class="col-lg-8">\n' +
+            '                        <div class="col-lg-8 col-9">\n' +
             '                            <div class="ptDayBoxTimeName">طلوع آفتاب</div>\n' +
             '                            <div class="ptDayBoxTimeValue">' + times.sunrise + '</div>\n' +
             '                        </div>\n' +
@@ -92,10 +97,10 @@ function refreshTimes() {
             '                </div>\n' +
             '                <div class="ptDayBoxTime">\n' +
             '                    <div class="row">\n' +
-            '                        <div class="col-lg-4">\n' +
+            '                        <div class="col-lg-4 col-3">\n' +
             '                            <img class="ptDayBoxIcon" src="assets/image/dhuhr.png">\n' +
             '                        </div>\n' +
-            '                        <div class="col-lg-8">\n' +
+            '                        <div class="col-lg-8 col-9">\n' +
             '                            <div class="ptDayBoxTimeName">اذان ظهر</div>\n' +
             '                            <div class="ptDayBoxTimeValue">' + times.dhuhr + '</div>\n' +
             '                        </div>\n' +
@@ -103,10 +108,10 @@ function refreshTimes() {
             '                </div>\n' +
             '                <div class="ptDayBoxTime">\n' +
             '                    <div class="row">\n' +
-            '                        <div class="col-lg-4">\n' +
+            '                        <div class="col-lg-4 col-3">\n' +
             '                            <img class="ptDayBoxIcon" src="assets/image/asr.png">\n' +
             '                        </div>\n' +
-            '                        <div class="col-lg-8">\n' +
+            '                        <div class="col-lg-8 col-9">\n' +
             '                            <div class="ptDayBoxTimeName">اذان عصر</div>\n' +
             '                            <div class="ptDayBoxTimeValue">' + times.asr + '</div>\n' +
             '                        </div>\n' +
@@ -114,10 +119,10 @@ function refreshTimes() {
             '                </div>\n' +
             '                <div class="ptDayBoxTime">\n' +
             '                    <div class="row">\n' +
-            '                        <div class="col-lg-4">\n' +
+            '                        <div class="col-lg-4 col-3">\n' +
             '                            <img class="ptDayBoxIcon" src="assets/image/fajr.png">\n' +
             '                        </div>\n' +
-            '                        <div class="col-lg-8">\n' +
+            '                        <div class="col-lg-8 col-9">\n' +
             '                            <div class="ptDayBoxTimeName">اذان مغرب</div>\n' +
             '                            <div class="ptDayBoxTimeValue">' + times.maghrib + '</div>\n' +
             '                        </div>\n' +
@@ -125,19 +130,26 @@ function refreshTimes() {
             '                </div>\n' +
             '                <div class="ptDayBoxTime">\n' +
             '                    <div class="row">\n' +
-            '                        <div class="col-lg-4">\n' +
+            '                        <div class="col-lg-4 col-3">\n' +
             '                            <img class="ptDayBoxIcon" src="assets/image/isha.png">\n' +
             '                        </div>\n' +
-            '                        <div class="col-lg-8">\n' +
+            '                        <div class="col-lg-8 col-9">\n' +
             '                            <div class="ptDayBoxTimeName">اذان عشاء</div>\n' +
             '                            <div class="ptDayBoxTimeValue">' + times.isha + '</div>\n' +
             '                        </div>\n' +
-            '                    </div>\n' +
-            '                </div>\n' +
-            '            </div>\n' +
-            '        </div>';
+            '                    </div></div>';
+        if (!isMobile()) {
+            body += '</div></div>';
+        }else{
+            body += '</div>';
+        }
     }
-    $('#ptBody').html(body);
+    if (isMobile()) {
+        $('#ptMobileDayBox').html(body);
+    }else{
+        $('#ptBody').html(body);
+    }
+
 }
 
 $(document).ready(function() {

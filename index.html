@@ -39,14 +39,10 @@
     <div class="container">
         <div class="row">
             <div class="col-12 mt-30">
-                <input class="ptCityInput ptMobileCityInput ts-3">
-                <div class="ptCityInputBtn ptMobileCityInputBtn noSelect">تعیین</div>
+                <input class="ptCityInput ptMobileCityInput ts-3" value="تهران">
+                <div class="ptCityInputBtn ptMobileCityInputBtn noSelect" onclick="refreshTimes()">تعیین</div>
                 <div id="ptMobileCitySearchResult" class="ptCitySearchResult hidden">
-                    <ul class="ptCitySearchList noSelect">
-                        <li>تهران</li>
-                        <li>مشهد</li>
-                        <li>اصفهان</li>
-                    </ul>
+                    <ul class="ptCitySearchList noSelect"></ul>
                 </div>
             </div>
         </div>
@@ -62,9 +58,7 @@
 
             <div class="row">
                 <div class="col-12">
-                    <div id="ptMobileDayBox">
-
-                    </div>
+                    <div id="ptMobileDayBox"></div>
                 </div>
             </div>
         </div>
