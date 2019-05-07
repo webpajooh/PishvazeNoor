@@ -301,9 +301,19 @@ body{
     padding-top: 2px;
 }
 .ptMobileDaySliderArrow{
-    font: 20px 'FShabnamB';
-    font-weight: bold;
+    background: url('../image/arrows.png');
+    font-size: 0;
+    margin-top: 7px;
     cursor: pointer;
+}
+#ptMobileLeftArrow{
+    width: 13px;
+    height: 20px;
+}
+#ptMobileRightArrow{
+    width: 13px;
+    height: 20px;
+    background-position-x: 13px;
 }
 #ptMobileDayBox{
     width: 100%;
