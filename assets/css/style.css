@@ -218,6 +218,79 @@ body{
 #ptForMobile{
     margin-bottom: 25px;
 }
+#ptMobileSettingBtn{
+    width: 100%;
+    background: #999;
+    color: #fff;
+    font: 17px 'FShabnam';
+    text-align: center;
+    border-radius: 4px;
+    padding: 10px 0;
+    margin-top: 10px;
+    transition: .4s;
+    cursor: pointer;
+}
+#ptMobileSettingBtn:active{
+    background: #888;
+}
+#ptMobileModal{
+    display: none;
+    position: fixed;
+    width: 90%;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    padding: 18px 0 25px 0;
+    top: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    right: 0;
+    left: 0;
+}
+.ptCloseModal{
+    color: #333;
+    font-size: 25px;
+    float: left;
+    margin: -10px 0 0 5px;
+    cursor: pointer;
+}
+.ptMobileModalHeading{
+    color: #333;
+    font: 19px 'FShabnamB';
+}
+.ptMobileGPSBtn{
+    width: 100%;
+    background: #999;
+    color: #fff;
+    font: 17px 'FShabnam';
+    text-align: center;
+    border-radius: 4px;
+    padding: 10px 0;
+    transition: .4s;
+    cursor: pointer;
+}
+.ptMobileGPSBtn:active{background:#888;}
+.ptMobileSettingRadioContainer{
+    width: 100%;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    margin-top: 10px !important;
+}
+.ptMobileSettingRadioContainer .ptSettingRadio{
+    display: block !important;
+    width: 100%;
+    text-align: center;
+    border-radius: 4px !important;
+    margin: 0;
+}
+.ptMobileSettingRadioContainer .ptSettingRadioDefault{
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+.ptMobileSettingRadioContainer .ptSettingRadioHanafi{
+    border-top-right-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+}
 #ptMobileDaySlider{
     width: 100%;
     padding: 25px 0;

@@ -44,6 +44,7 @@
                 <div id="ptMobileCitySearchResult" class="ptCitySearchResult hidden">
                     <ul class="ptCitySearchList noSelect"></ul>
                 </div>
+                <div id="ptMobileSettingBtn">تنظیمات</div>
             </div>
         </div>
 
@@ -67,6 +68,18 @@
 
 <div class="container">
     <p class="crText">تمامی حقوق برای <a href="https://webpajooh.github.io/WebPajooh/">وب‌پژوه</a> محفوظ است؛ هرگونه کپی‌برداری در صورت حذف این متن، ممنوع می‌باشد.</p>
+</div>
+
+<div id="ptMobileModal">
+    <div class="container">
+        <strong class="ptMobileModalHeading">تنظیمات</strong>
+        <span class="ptCloseModal">x</span>
+        <div class="ptMobileGPSBtn mt-20" onclick="setCustomPosition()">موقعیت‌یابی</div>
+        <div id="ptSettingRadioContainer" class="ptMobileSettingRadioContainer">
+            <div class="ptSettingRadio noSelect ptSettingRadioDefault ptActiveRadio" onclick="setAsrMethod('Standard')">حالت پیش‌فرض</div>
+            <div class="ptSettingRadio noSelect ptSettingRadioHanafi" onclick="setAsrMethod('Hanafi')">فقه حنفی</div>
+        </div>
+    </div>
 </div>
 
 <script src="assets/js/jquery.js"></script>

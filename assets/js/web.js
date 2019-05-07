@@ -32,12 +32,14 @@ function setCustomPosition() {
             customLatitude = position.coords.latitude;
             customLongitude = position.coords.longitude;
             $('.ptCityInput').val('استفاده از GPS');
+            $('#ptMobileModal').slideUp();
             setHeaderTitle('اوقات شرعی بر اساس مختصات');
         });
     }else{
         usingGPS = false;
         alert('Geolocation is not supported by this browser.');
         selectProvince(currentProvince);
+        $('#ptMobileModal').slideUp();
     }
 }
 
@@ -211,5 +213,12 @@ $(document).ready(function() {
         let currentSlide = $('.ptMobileDaySlide:nth-child(' + mobileCurrentSlide + ')');
         currentSlide.show();
         $('.ptMobileDayTitle').text(currentSlide.attr('day'));
+    });
+
+    $('#ptMobileSettingBtn').click(function() {
+        $('#ptMobileModal').slideDown();
+    });
+    $('.ptCloseModal').click(function() {
+        $('#ptMobileModal').slideUp();
     });
 });
