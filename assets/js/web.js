@@ -157,6 +157,8 @@ function refreshTimes() {
 }
 
 $(document).ready(function() {
+    refreshTimes();
+
     $('.ptSettingRadio').click(function() {
         $('.ptSettingRadio').removeClass('ptActiveRadio');
         $(this).addClass('ptActiveRadio');
