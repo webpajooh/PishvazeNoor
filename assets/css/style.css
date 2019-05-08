@@ -27,9 +27,26 @@ body{
 /*
     Header styles
  */
+#titleBar{
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+    padding: 10px 0 6px;
+}
+.titleBarIcon{
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: url('../image/logo.png');
+    background-size: cover;
+    border-radius: 5px;
+    float: right;
+}
 .pageTitle{
+    display: inline-block;
     color: #333;
-    font: 27px 'FShabnamB';
+    font: 24px 'FShabnamB';
+    margin: 10px 12px;
 }
 #ptSettingForm{
     margin-top: 30px;
