@@ -20,6 +20,7 @@ a{text-decoration:none !important;} a:hover{text-decoration:none !important;} a:
 body{
     direction: rtl;
     background: url('../image/background.jpg') no-repeat top center;
+    background-position-y: 40px;
     background-color: #e4e4e4;
     text-align: right;
 }
