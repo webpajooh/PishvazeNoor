@@ -64,7 +64,14 @@ body{
     border-bottom-left-radius: 4px;
     float: left;
     padding-top: 10px;
+    transition: .4s;
     cursor: pointer;
+}
+.ptCityInputBtn:hover{
+	background: #06cf72;
+}
+.ptCityInputBtn:active{
+	background: var(--clr1);
 }
 .ptCitySearchResult{
     display: none;
