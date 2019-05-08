@@ -248,10 +248,13 @@ body{
     left: 0;
 }
 .ptCloseModal{
-    color: #333;
-    font-size: 25px;
+	width: 13px;
+	height: 18px;
+	background: url('../image/icons.png');
+	background-position-x: -28px;
+    font-size: 0;
     float: left;
-    margin: -10px 0 0 5px;
+    margin: 3px 0 0 5px;
     cursor: pointer;
 }
 .ptMobileModalHeading{
@@ -301,7 +304,7 @@ body{
     padding-top: 2px;
 }
 .ptMobileDaySliderArrow{
-    background: url('../image/arrows.png');
+    background: url('../image/icons.png');
     font-size: 0;
     margin-top: 7px;
     cursor: pointer;
@@ -313,7 +316,7 @@ body{
 #ptMobileRightArrow{
     width: 13px;
     height: 20px;
-    background-position-x: 13px;
+    background-position-x: -13px;
 }
 #ptMobileDayBox{
     width: 100%;
