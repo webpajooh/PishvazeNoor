@@ -190,7 +190,7 @@ $(document).ready(function() {
         if (filtered.length > 0) {
             let items = filtered.map(function(e) {
                 let pid = provinces.indexOf(e);
-                return '<li onclick="selectProvince(' + pid + ')">' + e + '</li pid="' + pid + '">'
+                return '<li onmousedown="selectProvince(' + pid + ')">' + e + '</li pid="' + pid + '">'
             });
             ptCitySearchResult.html('<ul class="ptCitySearchList noSelect"></ul>');
             $('.ptCitySearchList').html(items);
