@@ -49,6 +49,12 @@ body{
     font: 24px 'FShabnamB';
     margin: 10px 12px;
 }
+.ptTitlebarCityInput{
+    width: auto !important;
+    border-radius: 20px !important;
+    margin-top: 3px;
+    transition: .4s !important;
+}
 #ptSettingForm{
     margin-top: 30px;
 }
@@ -370,9 +376,13 @@ body{
 @media screen and (max-width: 500px) {
     #ptForMobile{display: block !important;}
     #ptForDesktop{display: none !important;}
+    .forMobile{display: block !important;}
+    .forDesktop{display: none !important;}
     .ptDayBoxTimeName{margin-top: 5%;}
 }
 @media screen and (min-width: 501px) {
     #ptForDesktop{display: block !important;}
     #ptForMobile{display: none !important;}
+    .forMobile{display: none !important;}
+    .forDesktop{display: block !important;}
 }
