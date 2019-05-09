@@ -166,9 +166,9 @@ $(document).ready(function() {
     });
 
     $('.ptTitlebarCityInput').focus(function() {
-        $(this).removeClass('ptTCIClosed');
+        $(this).removeClass('ptTCIClosed').addClass('ptTCIOpen');
     }).blur(function() {
-        $(this).addClass('ptTCIClosed');
+        $(this).removeClass('ptTCIOpen').addClass('ptTCIClosed');
     });
 
     let ptCitySearchResult = $('.ptCitySearchResult');

@@ -49,7 +49,7 @@ body{
     font: 24px 'FShabnamB';
     margin: 10px 12px;
 }
-.ptTCIC{position: relative; display: inline;}
+.ptTCIC{position: relative; display: inline-block;}
 .ptTitlebarGPSBtn{
     display: inline-block;
     width: 45px;
@@ -84,11 +84,14 @@ body{
     color: rgba(0, 0, 0, 0) !important;
     padding-left: 0 !important;
 }
+.ptTCIOpen{
+    width: 100% !important;
+}
 .ptTitlebarSearchResult{
-    width: 225px !important;
+    width: 228px !important;
     top: 47px;
-    right: 0;
-    margin-right: 20px;
+    right: auto;
+    margin-right: 15px;
 }
 #ptSettingForm{
     margin-top: 30px;
