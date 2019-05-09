@@ -231,3 +231,5 @@ $(document).ready(function() {
         $('#ptMobileModal').slideUp();
     });
 });
+
+$(window).resize(null, function() {refreshTimes();});
