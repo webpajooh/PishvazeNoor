@@ -50,10 +50,18 @@ body{
     margin: 10px 12px;
 }
 .ptTitlebarCityInput{
-    width: auto !important;
+    width: 100% !important;
+    background: url('../image/search.png') no-repeat 12px 9px;
     border-radius: 20px !important;
+    padding-left: 55px !important;
+    float: left;
     margin-top: 3px;
     transition: .4s !important;
+}
+.ptTCIClosed{
+    width: 51px !important;
+    color: rgba(0, 0, 0, 0) !important;
+    padding-left: 0 !important;
 }
 #ptSettingForm{
     margin-top: 30px;

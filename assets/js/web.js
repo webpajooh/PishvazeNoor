@@ -164,6 +164,12 @@ $(document).ready(function() {
         $(this).addClass('ptActiveRadio');
     });
 
+    $('.ptTitlebarCityInput').focus(function() {
+        $(this).removeClass('ptTCIClosed');
+    }).blur(function() {
+        $(this).addClass('ptTCIClosed');
+    });
+
     let ptCitySearchResult = $('.ptCitySearchResult');
     $('.ptCityInput').focus(function() {
         $(this).val('');
