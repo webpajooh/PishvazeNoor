@@ -49,6 +49,7 @@ body{
     font: 24px 'FShabnamB';
     margin: 10px 12px;
 }
+.ptTitlebarSearchContainer{position: relative;}
 .ptTitlebarCityInput{
     width: 100% !important;
     background: url('../image/search.png') no-repeat 12px 9px;
@@ -62,6 +63,11 @@ body{
     width: 51px !important;
     color: rgba(0, 0, 0, 0) !important;
     padding-left: 0 !important;
+}
+.ptTitlebarSearchResult{
+    width: 225px !important;
+    top: 47px;
+    margin-right: 20px;
 }
 #ptSettingForm{
     margin-top: 30px;

@@ -19,6 +19,7 @@ function selectProvince(id) {
     $('.ptCityInput ').val(provinces[id]);
     setHeaderTitle('اوقات شرعی ' + provinces[id]);
     $('.ptCitySearchResult').hide();
+    refreshTimes();
 }
 
 function setAsrMethod(method) {
