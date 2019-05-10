@@ -36,6 +36,7 @@ function setCustomPosition() {
             $('.ptCityInput').val('استفاده از GPS');
             $('#ptMobileModal').slideUp();
             setHeaderTitle('اوقات شرعی بر اساس مختصات');
+            refreshTimes();
         });
     }else{
         usingGPS = false;
