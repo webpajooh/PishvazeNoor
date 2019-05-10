@@ -164,16 +164,11 @@ $(document).ready(function() {
     $('.ptTitlebarAsrBtn').click(function() {
         $('#asrBtnList').fadeToggle(200);
     });
-    $('.ptDefaultAsr').click(function() {
-        setAsrMethod('Standard');
-        $('.ptDefaultAsr').addClass('ptBtnListActive');
-        $('.ptHanafiAsr').removeClass('ptBtnListActive');
-        $('#asrBtnList').fadeOut(200);
-    });
-    $('.ptHanafiAsr').click(function() {
-        setAsrMethod('Hanafi');
-        $('.ptHanafiAsr').addClass('ptBtnListActive');
-        $('.ptDefaultAsr').removeClass('ptBtnListActive');
+    $('.ptAsrMethodItem').click(function() {
+        let method = $(this).attr('method');
+        setAsrMethod(method);
+        $('.asrBtnList').find('.ptBtnListActive').removeClass('ptBtnListActive');
+        $(this).addClass('ptBtnListActive');
         $('#asrBtnList').fadeOut(200);
     });
 
