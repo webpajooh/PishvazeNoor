@@ -24,6 +24,7 @@ function selectProvince(id) {
 
 function setAsrMethod(method) {
     asrMethod = method;
+    refreshTimes();
 }
 
 function setCustomPosition() {
@@ -159,6 +160,22 @@ function refreshTimes() {
 
 $(document).ready(function() {
     refreshTimes();
+
+    $('.ptTitlebarAsrBtn').click(function() {
+        $('#asrBtnList').fadeToggle(200);
+    });
+    $('.ptDefaultAsr').click(function() {
+        setAsrMethod('Standard');
+        $('.ptDefaultAsr').addClass('ptBtnListActive');
+        $('.ptHanafiAsr').removeClass('ptBtnListActive');
+        $('#asrBtnList').fadeOut(200);
+    });
+    $('.ptHanafiAsr').click(function() {
+        setAsrMethod('Hanafi');
+        $('.ptHanafiAsr').addClass('ptBtnListActive');
+        $('.ptDefaultAsr').removeClass('ptBtnListActive');
+        $('#asrBtnList').fadeOut(200);
+    });
 
     $('.ptSettingRadio').click(function() {
         $('.ptSettingRadio').removeClass('ptActiveRadio');

@@ -73,6 +73,7 @@ body{
     margin: 7px auto 0 auto;
 }
 .ptTitlebarAsrBtn{
+    position: relative;
     margin: 3px 10px 0 0;
 }
 .ptTitlebarAsrBtn:hover{background: #eaeaea;}
@@ -82,6 +83,42 @@ body{
     background: url('../image/icons.png');
     background-position-x: -58px;
     margin: 7px auto 0 auto;
+}
+#asrBtnList{
+    display: none;
+    position: absolute;
+    z-index: 99;
+    width: 169px;
+    background: #fff;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, .2);
+    top: 75px;
+}
+#asrBtnList:before{bottom: 100%;left: 50%;border: solid transparent;content: " ";height: 0;width: 0;position: absolute;z-index: 999;pointer-events: none;border-color: rgba(255, 255, 255, 0);border-bottom-color: #fff;border-width: 10px;margin-left: -10px;}
+#asrBtnList ul{padding: 0; margin: 0; border-radius: 4px;}
+#asrBtnList ul li{
+    font: 16px 'FShabnam';
+    text-align: center;
+    list-style: none;
+    padding: 12px 18px;
+    transition: .1s;
+    cursor: pointer;
+}
+#asrBtnList ul li:hover{
+    background: #eee;
+}
+#asrBtnList ul li:active{
+    background: var(--clr1);
+    color: #fff;
+}
+.ptHanafiAsr{
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.ptBtnListActive{
+    background: var(--clr1) !important;
+    color: #fff;
 }
 .ptTitlebarCityInput{
     width: 60% !important;
