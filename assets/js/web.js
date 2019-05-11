@@ -17,7 +17,7 @@ function selectProvince(id) {
     usingGPS = false;
     currentProvince = id;
     $('.ptCityInput ').val(provinces[id]);
-    setHeaderTitle('اوقات شرعی ' + provinces[id]);
+    setHeaderTitle(provinces[id]);
     $('.ptCitySearchResult').hide();
     refreshTimes();
 }
@@ -35,7 +35,7 @@ function setCustomPosition() {
             customLongitude = position.coords.longitude;
             $('.ptCityInput').val('استفاده از GPS');
             $('#ptMobileModal').slideUp();
-            setHeaderTitle('اوقات شرعی بر اساس مختصات');
+            setHeaderTitle('بر اساس مختصات');
             refreshTimes();
         });
     }else{
@@ -47,8 +47,8 @@ function setCustomPosition() {
 }
 
 function setHeaderTitle(title) {
-    document.title = title;
-    $('.pageTitle').text(title);
+    document.title = 'اوقات شرعی - ' + title;
+    $('.titlebarProvinceName').text(title);
 }
 
 function isMobile() {

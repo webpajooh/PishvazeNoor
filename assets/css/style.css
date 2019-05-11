@@ -58,7 +58,16 @@ body{
     display: inline-block;
     color: #333;
     font: 24px 'FShabnamB';
-    margin: 10px 12px;
+    margin: 10px 12px 10px 5px;
+}
+.titlebarProvinceName{
+    background: #444;
+    color: #fff;
+    font: 18px 'FShabnam';
+    border-radius: 4px;
+    padding: 1px 5px 3px 6px;
+    float: left;
+    margin: 12px 5px 0 0;
 }
 .ptTCIC{position: relative; display: inline-block;}
 .ptTitlebarBtn{
