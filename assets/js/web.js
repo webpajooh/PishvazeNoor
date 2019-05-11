@@ -56,7 +56,7 @@ function setCustomPosition() {
 }
 
 function setHeaderTitle(title) {
-    document.title = 'اوقات شرعی - ' + title;
+    document.title = 'پیشواز نور - ' + title;
     $('.titlebarProvinceName').text(title);
 }
 
