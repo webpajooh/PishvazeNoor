@@ -165,7 +165,6 @@ function refreshTimes() {
     }else{
         $('#ptBody').html(body);
     }
-
 }
 
 $(document).ready(function() {
