@@ -13,6 +13,10 @@ a{text-decoration:none !important;} a:hover{text-decoration:none !important;} a:
 .mt-40{margin-top: 40px;}
 .ts-3{transition: .3s;}
 .ts-4{transition: .4s;}
+@keyframes fadein{
+    from {opacity: 0;}
+    to   {opacity: 1;}
+}
 
 :root {
     --clr1: #05c46b;
@@ -33,6 +37,13 @@ body{
     background: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
     padding: 10px 0 6px;
+}
+.titleBarFixed{
+    position: fixed;
+    z-index: 10;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .3) !important;
+    animation: fadein .3s;
+    top: 0;
 }
 .titleBarIcon{
     display: inline-block;
