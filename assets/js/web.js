@@ -14,12 +14,21 @@ let asrMethod = 'Standard';
 let mobileCurrentSlide = 1;
 
 function selectProvince(id) {
-    usingGPS = false;
+    setUsingGPS(false);
     currentProvince = id;
     $('.ptCityInput ').val(provinces[id]);
     setHeaderTitle(provinces[id]);
     $('.ptCitySearchResult').hide();
     refreshTimes();
+}
+
+function setUsingGPS(status = true) {
+    usingGPS = status;
+    if (status) {
+        $('.ptTitlebarGPSBtn').addClass('pTitlebarBtnActive');
+    }else{
+        $('.ptTitlebarGPSBtn').removeClass('pTitlebarBtnActive');
+    }
 }
 
 function setAsrMethod(method) {
@@ -30,7 +39,7 @@ function setAsrMethod(method) {
 function setCustomPosition() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
-            usingGPS = true;
+            setUsingGPS();
             customLatitude = position.coords.latitude;
             customLongitude = position.coords.longitude;
             $('.ptCityInput').val('استفاده از GPS');
@@ -39,7 +48,7 @@ function setCustomPosition() {
             refreshTimes();
         });
     }else{
-        usingGPS = false;
+        setUsingGPS(false);
         alert('Geolocation is not supported by this browser.');
         selectProvince(currentProvince);
         $('#ptMobileModal').slideUp();

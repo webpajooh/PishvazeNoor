@@ -81,6 +81,9 @@ body{
     transition: .3s;
     cursor: pointer;
 }
+.pTitlebarBtnActive{
+    background: #eaeaea;
+}
 .ptTitlebarGPSBtn{
     margin: 3px 5px 0 15px;
 }
