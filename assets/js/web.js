@@ -173,6 +173,7 @@ $(document).ready(function() {
 
     $('.ptTitlebarAsrBtn').click(function() {
         $('#asrBtnList').fadeToggle(200);
+        $(this).toggleClass('pTitlebarBtnActive');
     });
     $('.ptAsrMethodItem').click(function() {
         let method = $(this).attr('method');
@@ -180,6 +181,7 @@ $(document).ready(function() {
         $('.asrBtnList').find('.ptBtnListActive').removeClass('ptBtnListActive');
         $(this).addClass('ptBtnListActive');
         $('#asrBtnList').fadeOut(200);
+        $('.ptTitlebarAsrBtn').removeClass('pTitlebarBtnActive');
     });
 
     $('.ptSettingRadio').click(function() {
