@@ -257,8 +257,8 @@ $(document).ready(function() {
 });
 
 $(window).scroll(function(){
-    if ($(window).scrollTop() > 200) $('#titleBar').addClass('titleBarFixed');
-    else $('#titleBar').removeClass('titleBarFixed');
+    if ($(window).scrollTop() > 200) $('#titlebar').addClass('titleBarFixed');
+    else $('#titlebar').removeClass('titleBarFixed');
 });
 
 $(window).resize(null, function() {refreshTimes();});
