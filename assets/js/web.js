@@ -20,6 +20,7 @@ function selectProvince(id) {
     $('.ptCityInput ').val(provinces[id]);
     setHeaderTitle(provinces[id]);
     $('.ptCitySearchResult').hide();
+    saveOptions();
     refreshTimes();
 }
 
@@ -34,6 +35,7 @@ function setUsingGPS(status = true) {
 
 function setAsrMethod(method) {
     options.asrMethod = method;
+    saveOptions();
     refreshTimes();
 }
 
@@ -59,6 +61,15 @@ function setCustomPosition() {
 function setHeaderTitle(title) {
     document.title = 'پیشواز نور - ' + title;
     $('.titlebarProvinceName').text(title);
+}
+
+function saveOptions() {
+    let optionsToString = JSON.stringify(options);
+    setCookie('PishvazeNoor', optionsToString, 365);
+}
+
+function loadOptions() {
+    options = JSON.parse(getCookie('PishvazeNoor'));
 }
 
 function isMobile() {
@@ -169,6 +180,7 @@ function refreshTimes() {
 }
 
 $(document).ready(function() {
+    loadOptions();
     refreshTimes();
 
     $('.ptTitlebarAsrBtn').click(function() {
