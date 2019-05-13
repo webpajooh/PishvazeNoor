@@ -70,6 +70,7 @@ function saveOptions() {
 
 function loadOptions() {
     options = JSON.parse(getCookie('PishvazeNoor'));
+    selectProvince(options.province);
 }
 
 function isMobile() {
