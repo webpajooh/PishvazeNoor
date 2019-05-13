@@ -71,6 +71,9 @@ function saveOptions() {
 function loadOptions() {
     options = JSON.parse(getCookie('PishvazeNoor'));
     selectProvince(options.province);
+    console.log(options.asrMethod);
+    $('.asrBtnList').find('.ptBtnListActive').removeClass('ptBtnListActive');
+    $('.ptAsrMethodItem[method=' + options.asrMethod + ']').addClass('ptBtnListActive');
 }
 
 function isMobile() {
