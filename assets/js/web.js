@@ -8,14 +8,13 @@ let daysOfWeek = ['یک‌شنبه', 'دوشنبه', 'سه‌شنبه', 'چها�
 const provinces = ['آذربایجان شرقی', 'آذربایجان غربی', 'اردبیل', 'اصفهان', 'البرز', 'ایلام', 'بوشهر', 'تهران', 'چهارمحال و بختیاری', 'خراسان جنوبی', 'خراسان رضوی', 'خراسان شمالی', 'خوزستان', 'زنجان', 'سمنان', 'سیستان و بلوچستان', 'فارس', 'قزوین', 'قم', 'کردستان', 'کرمان', 'کرمانشاه', 'کهگیلویه و بویراحمد', 'گلستان', 'گیلان', 'لرستان', 'مازندران', 'مرکزی', 'هرمزگان', 'همدان', 'یزد'];
 const latitudes = [38.0, 37.5, 38.2, 32.6, 35.8, 33.6, 28.9, 35.7, 32.3, 32.8, 36.3, 37.4, 31.5, 36.6, 35.5, 29.4, 29.6, 36.2, 34.6, 35.3, 30.2, 34.3, 30.6, 36.8, 37.2, 33.4, 36.5, 34.0, 27.1, 34.8, 31.8];
 const longitudes = [46.2, 45.0, 48.3, 51.6, 50.9, 46.4, 50.8, 51.3, 50.8, 59.2, 59.6, 57.3, 49.8, 48.4, 53.3, 60.8, 52.5, 50.0, 50.8, 46.9, 57.0, 46.4, 51.5, 54.4, 49.6, 48.3, 53.0, 49.6, 56.2, 48.5, 54.3];
-let currentProvince = 7;
+let options = {province: 7, asrMethod: 'Standard'};
 let customLatitude, customLongitude, usingGPS=false;
-let asrMethod = 'Standard';
 let mobileCurrentSlide = 1;
 
 function selectProvince(id) {
     setUsingGPS(false);
-    currentProvince = id;
+    options.province = id;
     $('.ptCityInput ').val(provinces[id]);
     setHeaderTitle(provinces[id]);
     $('.ptCitySearchResult').hide();
@@ -32,7 +31,7 @@ function setUsingGPS(status = true) {
 }
 
 function setAsrMethod(method) {
-    asrMethod = method;
+    options.asrMethod = method;
     refreshTimes();
 }
 
@@ -50,7 +49,7 @@ function setCustomPosition() {
     }else{
         setUsingGPS(false);
         alert('Geolocation is not supported by this browser.');
-        selectProvince(currentProvince);
+        selectProvince(options.province);
         $('#ptMobileModal').slideUp();
     }
 }
@@ -73,8 +72,8 @@ function refreshTimes() {
         latitude = customLatitude;
         longitude = customLongitude;
     }else{
-        latitude = latitudes[currentProvince];
-        longitude = longitudes[currentProvince];
+        latitude = latitudes[options.province];
+        longitude = longitudes[options.province];
     }
     for (let i=0; i<7; i++) {
         if (i > 0) {todayBoxClass = '';}else{todayBoxClass = 'ptDayBoxToday';}
@@ -82,7 +81,7 @@ function refreshTimes() {
         date.setDate(date.getDate() + i);
         let jDate = new jdate(date);
         let jFullDate = jDate.date[0] + '/' + jDate.date[1] + '/' + jDate.date[2];
-        prayTimes.adjust({asr: asrMethod});
+        prayTimes.adjust({asr: options.asrMethod});
         times = prayTimes.getTimes(date, [latitude, longitude]);
         if (!isMobile()) {
             body += '<div class="col-lg-3"><div class="ptDayBox ' + todayBoxClass + '"><h2 class="ptDayBoxTitle">' + daysOfWeek[date.getDay()] + '</h2><h3 class="ptDayBoxDate">' + jFullDate + '</h3>';
@@ -199,7 +198,7 @@ $(document).ready(function() {
         $(this).val('');
     }).blur(function() {
         if (($(this).val() == '' || $('.searchError').length) && !usingGPS) {
-            $(this).val(provinces[currentProvince]);
+            $(this).val(provinces[options.province]);
             ptCitySearchResult.hide();
         }
         if (usingGPS) {
