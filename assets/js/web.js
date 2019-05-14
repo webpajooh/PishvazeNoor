@@ -69,6 +69,9 @@ function saveOptions() {
 }
 
 function loadOptions() {
+    if (getCookie('PishvazeNoor') == '') {
+        saveOptions();
+    }
     options = JSON.parse(getCookie('PishvazeNoor'));
     selectProvince(options.province);
     console.log(options.asrMethod);
