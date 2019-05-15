@@ -209,8 +209,16 @@ $(document).ready(function() {
 
     $('.ptTitlebarCityInput').focus(function() {
         $(this).removeClass('ptTCIClosed').addClass('ptTCIOpen');
+        if ($(window).width() < 980) {
+            $('.pageTitle').hide();
+            $('.titlebarProvinceName').hide();
+        }
     }).blur(function() {
         $(this).removeClass('ptTCIOpen').addClass('ptTCIClosed');
+        if ($(window).width() < 980) {
+            $('.pageTitle').delay(500).fadeIn(500);
+            $('.titlebarProvinceName').delay(500).fadeIn(500);
+        }
     });
 
     let ptCitySearchResult = $('.ptCitySearchResult');
