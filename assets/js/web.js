@@ -109,7 +109,7 @@ function refreshTimes() {
         }
         body += '<div class="ptDayBoxTime"><div class="row">\n' +
             '                        <div class="col-lg-4 col-3">\n' +
-            '                            <img class="ptDayBoxIcon" src="assets/image/fajr.png">\n' +
+            '                            <div class="fajrIcon"></div>\n' +
             '                        </div>\n' +
             '                        <div class="col-lg-8 col-9">\n' +
             '                            <div class="ptDayBoxTimeName">اذان صبح</div>\n' +
@@ -120,7 +120,7 @@ function refreshTimes() {
             '                <div class="ptDayBoxTime">\n' +
             '                    <div class="row">\n' +
             '                        <div class="col-lg-4 col-3">\n' +
-            '                            <img class="ptDayBoxIcon" src="assets/image/sunrise.png">\n' +
+            '                            <div class="sunriseIcon"></div>\n' +
             '                        </div>\n' +
             '                        <div class="col-lg-8 col-9">\n' +
             '                            <div class="ptDayBoxTimeName">طلوع آفتاب</div>\n' +
@@ -131,7 +131,7 @@ function refreshTimes() {
             '                <div class="ptDayBoxTime">\n' +
             '                    <div class="row">\n' +
             '                        <div class="col-lg-4 col-3">\n' +
-            '                            <img class="ptDayBoxIcon" src="assets/image/dhuhr.png">\n' +
+            '                            <div class="dhuhrIcon"></div>\n' +
             '                        </div>\n' +
             '                        <div class="col-lg-8 col-9">\n' +
             '                            <div class="ptDayBoxTimeName">اذان ظهر</div>\n' +
@@ -142,7 +142,7 @@ function refreshTimes() {
             '                <div class="ptDayBoxTime">\n' +
             '                    <div class="row">\n' +
             '                        <div class="col-lg-4 col-3">\n' +
-            '                            <img class="ptDayBoxIcon" src="assets/image/asr.png">\n' +
+            '                            <div class="asrIcon"></div>\n' +
             '                        </div>\n' +
             '                        <div class="col-lg-8 col-9">\n' +
             '                            <div class="ptDayBoxTimeName">اذان عصر</div>\n' +
@@ -153,7 +153,7 @@ function refreshTimes() {
             '                <div class="ptDayBoxTime">\n' +
             '                    <div class="row">\n' +
             '                        <div class="col-lg-4 col-3">\n' +
-            '                            <img class="ptDayBoxIcon" src="assets/image/fajr.png">\n' +
+            '                            <div class="maghribIcon"></div>\n' +
             '                        </div>\n' +
             '                        <div class="col-lg-8 col-9">\n' +
             '                            <div class="ptDayBoxTimeName">اذان مغرب</div>\n' +
@@ -164,7 +164,7 @@ function refreshTimes() {
             '                <div class="ptDayBoxTime">\n' +
             '                    <div class="row">\n' +
             '                        <div class="col-lg-4 col-3">\n' +
-            '                            <img class="ptDayBoxIcon" src="assets/image/isha.png">\n' +
+            '                            <div class="ishaIcon"></div>\n' +
             '                        </div>\n' +
             '                        <div class="col-lg-8 col-9">\n' +
             '                            <div class="ptDayBoxTimeName">اذان عشاء</div>\n' +
