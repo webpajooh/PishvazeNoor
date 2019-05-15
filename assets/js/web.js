@@ -69,9 +69,7 @@ function saveOptions() {
 }
 
 function loadOptions() {
-    if (getCookie('PishvazeNoor') == '') {
-        saveOptions();
-    }
+    if (getCookie('PishvazeNoor') == '') saveOptions();
     options = JSON.parse(getCookie('PishvazeNoor'));
     selectProvince(options.province);
     $('.asrBtnList').find('.ptBtnListActive').removeClass('ptBtnListActive');
