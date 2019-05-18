@@ -337,11 +337,12 @@ body{
     height: 54px;
     background-size: cover !important;
 }
-.fajrIcon, .ishaIcon{background: url('../image/fajr.png') no-repeat;}
+.fajrIcon{background: url('../image/fajr.png') no-repeat;}
 .sunriseIcon{background: url('../image/sunrise.png') no-repeat;}
 .dhuhrIcon{background: url('../image/dhuhr.png') no-repeat;}
 .asrIcon{background: url('../image/asr.png') no-repeat;}
 .maghribIcon{background: url('../image/fajr.png') no-repeat;}
+.ishaIcon{background: url('../image/isha.png') no-repeat;}
 .ptDayBoxTimeName{
     color: #999;
     font: 16px 'FShabnam';
